@@ -1,8 +1,9 @@
+#include "twitcurl.h"
+
 #include <cstdio>
 #include <iostream>
 #include <fstream>
 #include <unistd.h>
-#include <twitcurl.h>
 #include <ros/ros.h>
 #include <std_msgs/String.h>
 #include <ros/package.h>
@@ -123,10 +124,10 @@ int main( int argc, char* argv[] )
     }
     else
     {
-	std::cout << "Getting OAuth tokens..." << std::endl;
+        std::cout << "Getting OAuth tokens..." << std::endl;
 
         /* Step 2: Get request token key and secret */
-	std::string tmpStr;
+        std::string tmpStr;
         twitterObj.oAuthRequestToken( tmpStr );
         twitterObj.oAuthHandlePIN( tmpStr );
 
@@ -139,7 +140,7 @@ int main( int argc, char* argv[] )
 
         /* Step 6: Save user, password and these keys in a param file */
         std::ofstream paramFile;
-	std::string path = ros::package::getPath("rostweet") + std::string("/launch/") + user + std::string("Params.yaml");
+        std::string path = ros::package::getPath("rostweet_bridge") + std::string("/launch/") + user + std::string("Params.yaml");
         paramFile.open( path.c_str() );        
         paramFile.clear();
         paramFile << "user: '" << user << "'" << std::endl;
@@ -147,8 +148,8 @@ int main( int argc, char* argv[] )
         paramFile << "tokenSecret: '" << tokenSecret << "'" << std::endl;
         paramFile.close();
 
-	std::cout << "Your params for account " << user << " have been stored in " << path << std::endl;
-	std::cout << "You can set them with rosparam if you want to skip this step in future executions" << std::endl;
+        std::cout << "Your params for account " << user << " have been stored in " << path << std::endl;
+        std::cout << "You can set them with rosparam if you want to skip this step in future executions" << std::endl;
     }
 
     std::cout << "Ready! Waiting for tweets..." << std::endl;

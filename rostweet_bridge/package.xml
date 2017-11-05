@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<package format="2">
+   <!-- Package description -->
+  <name>rostweet_bridge</name>
+  <version>0.1.0</version>
+  <description>Bridge node to the Twitter microblogging service.</description>
+  <maintainer email="mail@xperroni.me">Helio Perroni Filho</maintainer>
+  <author email="marioprats@gmail.com">Mario Prats</author>
+  <license>BSD</license>
+  <url type="repository">https://github.com/xperroni/rostweet</url>
+  <url type="website">http://wiki.ros.org/rostweet</url>
+
+  <!-- Compile-time and runtime dependencies -->
+  <buildtool_depend>catkin</buildtool_depend>
+  <build_depend>cmake_modules</build_depend>
+  <depend>roslib</depend>
+  <depend>roscpp</depend>
+  <depend>cv_bridge</depend>
+  <depend>rostweet_msgs</depend>
+  <depend>CURL</depend>
+  <depend>TinyXML</depend>
+</package>
+
