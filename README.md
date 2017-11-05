@@ -2,10 +2,6 @@
 
 The rostweet package provides a bridge between ROS nodes and the Twitter microblogging service.
 
-## Dependencies
-
-* [twitcurl](https://github.com/swatkat/twitcurl)
-
 ## Install
 
 The following instructions assume that `$ROS_HOME` points to the base installation directory of your ROS distribution, e.g. `/opt/ros/kinetic`. Substitute as appropriate.
@@ -44,11 +40,11 @@ This will ask for username and password to be manually entered. See the `rostwee
 
 One the service is running, you can manually test it using RQT. Open the GUI and select _Plugin -> Services -> Services Caller_:
 
-<img src="https://xperroni.github.io/rostweet/docs/rqt_1.jpg">
+<img src="https://xperroni.github.io/rostweet/rqt_1.jpg">
 
 Then use the Service Caller interface to configure and send a tweet:
 
-<img src="https://xperroni.github.io/rostweet/docs/rqt_2.jpg">
+<img src="https://xperroni.github.io/rostweet/rqt_2.jpg">
 
 A tweet should then be posted to the connected account.
 
