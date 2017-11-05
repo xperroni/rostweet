@@ -140,7 +140,7 @@ int main( int argc, char* argv[] )
 
         /* Step 6: Save user, password and these keys in a param file */
         std::ofstream paramFile;
-        std::string path = ros::package::getPath("rostweet_bridge") + std::string("/launch/") + user + std::string("Params.yaml");
+        std::string path = ros::package::getPath("rostweet") + std::string("/launch/") + user + std::string("Params.yaml");
         paramFile.open( path.c_str() );        
         paramFile.clear();
         paramFile << "user: '" << user << "'" << std::endl;
