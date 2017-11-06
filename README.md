@@ -38,7 +38,7 @@ After starting `roscore` you can run the rostweet bridge with:
 
 This will ask for username and password to be manually entered. See the `rostweet/launch/` subdirectory for example launch files.
 
-One the service is running, you can manually test it using RQT. Open the GUI and select _Plugin -> Services -> Services Caller_:
+Once the service is running, you can manually test it using RQT. Open the GUI and select _Plugin -> Services -> Services Caller_:
 
 <img src="https://xperroni.github.io/rostweet/rqt_1.jpg">
 
